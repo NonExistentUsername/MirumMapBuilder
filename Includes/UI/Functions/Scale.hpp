@@ -39,7 +39,6 @@ inline sf::Vector2<T> UnScale(const sf::Vector2<T>& vec) {
 	return sf::Vector2<T>(vec.x / Settings::User::Kx(), vec.y / Settings::User::Ky());
 }
 
-
 template<class T>
 inline T ScaleSize(T size) {
 	return size * std::min(Settings::User::Kx(), Settings::User::Ky());

@@ -20,7 +20,7 @@ SettingsMenu::BackButton::BackButton() {
 	canvas.left = 25;
 	canvas.top = 25;
 
-	texture = TexturesManager::Button;
+//	texture = TexturesManager::Button;
 
 	text = "Back";
 }

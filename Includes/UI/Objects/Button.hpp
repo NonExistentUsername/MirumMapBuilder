@@ -17,15 +17,18 @@
 
 namespace UI {
 	class Button : public sf::Drawable {
+	private:
+		void pressed(const sf::Event& event);
+		void _released(const sf::Event& event);
+
+		bool is_pressed = false;
 	protected:
 		sf::IntRect canvas;
-		std::shared_ptr<sf::Texture> texture = TexturesManager::Button;
 		std::string text;
 		sf::Color textColor = sf::Color(255, 255, 255);
 
-		virtual void pressed(const sf::Event& event);
-		virtual void unPressed(const sf::Event& event);
-		virtual void released(const sf::Event& event);
+		bool isPressed() const;
+		virtual void released(const sf::Event& event) = 0;
 
 		Button();
 	public:

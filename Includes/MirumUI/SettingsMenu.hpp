@@ -28,8 +28,9 @@ private:
 		void processChange(size_t id) override;
 	public:
 		ChangeResolutionButtonList();
-	};
 
+//		~ChangeResolutionButtonList();
+	};
 
 	ChangeResolutionButtonList _changeResolution;
 	BackButton _back;

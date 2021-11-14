@@ -14,7 +14,7 @@ MainMenu::ExitButton::ExitButton() {
 	canvas.left = 1920/2 - canvas.width/2;
 	canvas.top = 600;
 
-	texture = TexturesManager::Button;
+//	texture = TexturesManager::Button;
 
 	text = "Exit";
 }

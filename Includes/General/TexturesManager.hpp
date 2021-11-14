@@ -10,6 +10,18 @@
 #include <SFML/Graphics.hpp>
 #include <memory>
 
+enum ROOMS {
+	_3D_WALLS,
+	ARCHED_ENTRYWAYS,
+	BASEBOARDS,
+	BORDERS,
+	FLOOR_CONNECTORS,
+	FLOOR_PATHS,
+	FLOOR_SHADOWS,
+	FLOORS,
+	BUILDER_WALLS,
+};
+
 class TexturesManager {
 private:
 public:
@@ -24,4 +36,6 @@ public:
 
 	static const std::shared_ptr<sf::Texture> ButtonGreen;
 	static const std::shared_ptr<sf::Texture> ButtonGreenPressed;
+
+	static const std::vector<std::shared_ptr<sf::Texture>> Room_Builder;
 };

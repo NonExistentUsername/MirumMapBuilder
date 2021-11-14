@@ -23,6 +23,9 @@ namespace Geometry {
 		Vector2() {}
 		Vector2(T _x, T _y): x(_x), y(_y) {}
 //		Vector2(T&& _x, T&& _y): x(std::move(_x)), y(std::move(_y)) {}
+		template<class U>
+		Vector2(const sf::Vector2<U>& other): x(other.x), y(other.y) {}
+
 		Vector2(const Vector2<T>& other): x(other.x), y(other.y) {}
 		Vector2(const sf::Vector2<T>& other): x(other.x), y(other.x) {}
 

@@ -14,17 +14,14 @@
 namespace UI {
 	EmptyButton::EmptyButton() {
 		EventManager::buttonPressed += MY_METHOD_HANDLER(EmptyButton::buttonPressed);
-		EventManager::buttonUnPressed += MY_METHOD_HANDLER(EmptyButton::buttonUnPressed);
 		EventManager::buttonReleased += MY_METHOD_HANDLER(EmptyButton::buttonReleased);
 	}
 
 	void EmptyButton::buttonPressed(const sf::Event& event) {}
-	void EmptyButton::buttonUnPressed(const sf::Event& event) {}
 	void EmptyButton::buttonReleased(const sf::Event& event) {}
 
 	EmptyButton::~EmptyButton() {
 		EventManager::buttonPressed -= MY_METHOD_HANDLER(EmptyButton::buttonPressed);
-		EventManager::buttonUnPressed -= MY_METHOD_HANDLER(EmptyButton::buttonUnPressed);
 		EventManager::buttonReleased -= MY_METHOD_HANDLER(EmptyButton::buttonReleased);
 	}
 }

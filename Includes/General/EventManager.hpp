@@ -12,13 +12,14 @@
 
 class EventManager {
 private:
-	//sf::Event lastEvent;
+	static bool hasFocus;
 public:
 	static TEvent<const sf::Event&> buttonReleased;
 	static TEvent<const sf::Event&> buttonPressed;
-	static TEvent<const sf::Event&> buttonUnPressed;
-	static TEvent<const sf::Event::KeyEvent&> textEntered;
+	static TEvent<const sf::Event::KeyEvent&> keyPressed;
+	static TEvent<const sf::Event::MouseWheelScrollEvent&> mouseWheelScrolled;
 	static TEvent<> frameEvent;
 
 	static void processEvent(const sf::Event& event);
+	static void processEvents();
 };

@@ -19,7 +19,6 @@ namespace UI {
 	class EmptyButton : public sf::Drawable {
 	protected:
 		virtual void buttonPressed(const sf::Event& event);
-		virtual void buttonUnPressed(const sf::Event& event);
 		virtual void buttonReleased(const sf::Event& event);
 
 		EmptyButton();

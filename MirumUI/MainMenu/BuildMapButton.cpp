@@ -18,14 +18,14 @@ MainMenu::BuildMap::BuildMap(MapSize* _mapSize) {
 	canvas.left = 1920/2 - canvas.width/2;
 	canvas.top = 300;
 
-	texture = TexturesManager::Button;
+//	texture = TexturesManager::Button;
 
 	text = "Build Map";
 }
 
 void MainMenu::BuildMap::released(const sf::Event& event) {
 	if(!(mapSize->empty()) && canvas.contains(UnScale(sf::Vector2i(event.mouseButton.x, event.mouseButton.y)))) {
-		UI::MenuManager::openMenu<SinglePlayerMenu>(mapSize->get_size());
+		UI::MenuManager::openMenu<BuildMapMenu>(mapSize->get_size());
 	}
 }
 

@@ -10,7 +10,7 @@
 
 namespace UI {
 	TextManager::TextManager() {
-		EventManager::textEntered += MY_METHOD_HANDLER(TextManager::processTextEntered);
+		EventManager::keyPressed += MY_METHOD_HANDLER(TextManager::processTextEntered);
 		EventManager::frameEvent += MY_METHOD_HANDLER(TextManager::processEsc);
 	}
 
@@ -30,7 +30,7 @@ namespace UI {
 	}
 
 	TextManager::~TextManager() {
-		EventManager::textEntered -= MY_METHOD_HANDLER(TextManager::processTextEntered);
+		EventManager::keyPressed -= MY_METHOD_HANDLER(TextManager::processTextEntered);
 		EventManager::frameEvent -= MY_METHOD_HANDLER(TextManager::processEsc);
 	}
 }
